@@ -52,7 +52,7 @@
                 <div class="title">常用商品</div>
                 <div class="oftenList">
                     <ul>
-                        <li v-for="item in oftenGoods" @click="addGoods(item)">
+                        <li v-for="item in oftenGoods" :key="item.goodsId" @click="addGoods(item)">
                             <span>{{item.goodsName}}</span>
                             <span>{{item.price}}</span>
                         </li>
@@ -62,7 +62,7 @@
                     <el-tabs>
                         <el-tab-pane label="主食">
                             <ul>
-                                <li v-for="item in type0Goods" @click="addGoods(item)">
+                                <li v-for="item in type0Goods" :key="item.goodsId" @click="addGoods(item)">
                                     <span><img :src="item.goodsImg" alt=""></span>
                                     <span>{{item.goodsName}}</span>
                                     <span>{{item.price}}</span>
@@ -71,7 +71,7 @@
                         </el-tab-pane>
                         <el-tab-pane label="小食">
                             <ul>
-                                <li v-for="item in type1Goods" @click="addGoods(item)">
+                                <li v-for="item in type1Goods" :key="item.goodsId" @click="addGoods(item)">
                                     <span><img :src="item.goodsImg" alt=""></span>
                                     <span>{{item.goodsName}}</span>
                                     <span>{{item.price}}</span>
@@ -80,7 +80,7 @@
                         </el-tab-pane>
                         <el-tab-pane label="饮料">
                             <ul>
-                                <li v-for="item in type2Goods" @click="addGoods(item)">
+                                <li v-for="item in type2Goods" :key="item.goodsId" @click="addGoods(item)">
                                     <span><img :src="item.goodsImg" alt=""></span>
                                     <span>{{item.goodsName}}</span>
                                     <span>{{item.price}}</span>
@@ -89,7 +89,7 @@
                         </el-tab-pane>
                         <el-tab-pane label="套餐">
                             <ul>
-                                <li v-for="item in type3Goods" @click="addGoods(item)">
+                                <li v-for="item in type3Goods" :key="item.goodsId" @click="addGoods(item)">
                                     <span><img :src="item.goodsImg" alt=""></span>
                                     <span>{{item.goodsName}}</span>
                                     <span>{{item.price}}</span>
